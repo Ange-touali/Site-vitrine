@@ -1,0 +1,172 @@
+/* ------------------------------------ */
+/* COULEURS DU DRAPEAU DE CÔTE D'IVOIRE */
+/* ------------------------------------ */
+:root {
+    --couleur-orange: #F77F00; /* Orange */
+    --couleur-blanc: #FFFFFF; /* Blanc */
+    --couleur-vert: #009944;  /* Vert */
+    --couleur-texte-sombre: #333333;
+    --couleur-texte-clair: #FFFFFF;
+}
+
+/* ------------------------------------ */
+/* 1. RÉINITIALISATION ET BASE */
+/* ------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6;
+    background-color: var(--couleur-blanc); /* Fond principal blanc */
+    color: var(--couleur-texte-sombre); 
+    font-size: 16px; /* Taille de base pour le corps */
+}
+
+a {
+    text-decoration: none;
+    color: var(--couleur-vert); /* Liens par défaut en vert */
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------------ */
+/* 2. EN-TÊTE ET NAVIGATION (Couleurs fortes) */
+/* ------------------------------------ */
+header {
+    background-color: var(--couleur-orange); /* Barre de navigation en Orange */
+    padding: 15px 50px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo img {
+    height: 45px; /* Légèrement plus grand pour l'impact */
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; 
+}
+
+nav ul li {
+    margin-left: 25px; 
+}
+
+nav ul li a {
+    color: var(--couleur-blanc); /* Texte blanc sur fond orange */
+    font-weight: 600; /* Plus gras */
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1.1em; /* Un peu plus grand que la base */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Blanc transparent au survol */
+}
+
+/* ------------------------------------ */
+/* 3. MISE EN PAGE DU CONTENU */
+/* ------------------------------------ */
+.container {
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 30px;
+    background-color: var(--couleur-blanc); 
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+h2 {
+    color: var(--couleur-vert); /* Titres en Vert */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+p {
+    margin-bottom: 18px;
+    text-align: justify;
+    font-size: 1.05em; /* Légèrement plus grand pour la lecture */
+}
+
+/* Texte et Image côte à côte */
+.content-section {
+    display: flex; 
+    gap: 50px; 
+    margin-top: 30px;
+    align-items: center; 
+}
+
+.text-block, .image-block {
+    flex: 1; 
+}
+
+.image-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Style de la section Contacts */
+address {
+    font-style: normal;
+    line-height: 2;
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 5px solid var(--couleur-vert); /* Barre d'accent en Vert */
+    background-color: #e9fff4; /* Fond très clair et doux pour le bloc contact */
+    border-radius: 4px;
+}
+
+/* ------------------------------------ */
+/* 4. FOOTER */
+/* ------------------------------------ */
+footer {
+    background-color: var(--couleur-vert); /* Footer en Vert */
+    color: var(--couleur-blanc);
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+/* ------------------------------------ */
+/* 5. RESPONSIVE (Adaptation mobile) */
+/* ------------------------------------ */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+    .content-section {
+        flex-direction: column; 
+        gap: 20px;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
